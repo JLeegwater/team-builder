@@ -31,7 +31,7 @@ function App() {
     console.log(newMember);
 
     if (!newMember.name || !newMember.email || !newMember.role) return;
-    // setTeam(team.push(newMember));
+    setTeam([...team, newMember]);
     console.log(team);
     setFormValues(initialFormValues);
   };
@@ -49,6 +49,7 @@ function App() {
         submit={submitForm}
       />
 
+      {console.log(team)}
       {team.map((member) => {
         return (
           <div>
