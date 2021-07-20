@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  background: #202225;
-  color: #ffffff;
 }
 
 .App-logo {
@@ -37,4 +35,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
 }

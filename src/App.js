@@ -1,7 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import TeamForm from "./TeamForm";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const teamList = [
   { name: "Andrew", email: "Andrew@boy.com", role: "helper" },
@@ -28,11 +27,10 @@ function App() {
       email: formValues.email.trim(),
       role: formValues.role.trim(),
     };
-    console.log(newMember);
+    //console.log(newMember);
 
     if (!newMember.name || !newMember.email || !newMember.role) return;
     setTeam([...team, newMember]);
-    console.log(team);
     setFormValues(initialFormValues);
   };
 
@@ -49,10 +47,9 @@ function App() {
         submit={submitForm}
       />
 
-      {console.log(team)}
-      {team.map((member) => {
+      {team.map((member, idx) => {
         return (
-          <div>
+          <div key={idx}>
             <h2>Name: {member.name} </h2>
             <p>Email: {member.email}</p>
             <p>Roll: {member.role}</p>

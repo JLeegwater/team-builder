@@ -1,19 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-
-const teamList = [
-  { memberName: "Andrew", email: "Andrew@boy.com" },
-  { memberName: "Bunny", email: "Bunny@boy.com" },
-  { memberName: "Jesse", email: "Jesse@boy.com" },
-];
-
-const initialFormValues = { memberName: "", email: "" };
-
-function SimpleForm() {
-  const [team, setTeam] = useState(teamList);
-}
 
 ReactDOM.render(
   <React.StrictMode>
